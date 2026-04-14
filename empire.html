@@ -23,18 +23,26 @@
         .glass-card { 
             background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
             backdrop-filter: blur(20px); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
+            /* MODIFIED: More visible default border */
+            border: 1.5px solid rgba(255, 255, 255, 0.2); 
             border-radius: 32px; 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease-in-out;
         }
-        .glass-card:hover { border: 1px solid rgba(59, 130, 246, 0.4); transform: translateY(-5px); }
+
+        /* MODIFIED: High-intensity hover highlight */
+        .glass-card:hover { 
+            border: 1.5px solid rgba(59, 130, 246, 0.8); 
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+            transform: translateY(-5px); 
+        }
 
         .demo-container { 
             width: 100%; 
             height: 600px; 
             border-radius: 20px; 
             background: #050505; 
-            border: 1px solid rgba(255,255,255,0.05);
+            /* MODIFIED: More visible container border */
+            border: 1.5px solid rgba(255,255,255,0.15);
             box-shadow: inset 0 0 20px rgba(0,0,0,1);
             overflow: hidden;
         }
@@ -43,7 +51,6 @@
             width: 100%; 
             height: 100%; 
             border: none;
-            /* Allow internal scrolling but hide UI bars */
             scrollbar-width: none; 
             -ms-overflow-style: none;
         }
@@ -145,7 +152,7 @@
         </section>
 
         <section class="mb-32">
-            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Partner Intel & Logistics</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-blue-500">Partner Intel & Logistics</h2>
             <div class="space-y-4 max-w-3xl mx-auto">
                 <details class="glass-card p-6 group cursor-pointer">
                     <summary class="flex justify-between items-center font-bold text-sm tracking-tight">
