@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARS Empire | Partner Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background: #000; 
+            color: white; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* The "Clean" Scrollbar Logic */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.3); border-radius: 10px; }
+
+        .glass-card { 
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+            backdrop-filter: blur(20px); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 32px; 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-card:hover { border: 1px solid rgba(59, 130, 246, 0.4); transform: translateY(-5px); }
+
+        .demo-container { 
+            width: 100%; 
+            height: 600px; 
+            border-radius: 20px; 
+            background: #050505; 
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: inset 0 0 20px rgba(0,0,0,1);
+            overflow: hidden;
+        }
+
+        iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none;
+            /* Allow internal scrolling but hide UI bars */
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-12 lg:p-20">
+    <div class="hero-glow"></div>
+    
+    <div class="max-w-6xl mx-auto">
+        <header class="flex flex-col md:flex-row justify-between items-center mb-24 gap-6">
+            <div class="text-center md:text-left">
+                <h1 class="text-5xl font-extrabold tracking-tighter mb-2">
+                    ARS <span class="text-blue-500">Empire</span>
+                </h1>
+                <p class="text-gray-500 font-medium tracking-[0.1em] uppercase text-[10px]">Proprietary Reputation Intelligence</p>
+            </div>
+            <div class="flex gap-4">
+                <div class="glass-card px-6 py-2 flex items-center gap-2 border-emerald-500/20">
+                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
+                    <span class="text-xs font-bold text-emerald-500">Global Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            <div class="glass-card p-10 col-span-1 md:col-span-2 flex flex-col justify-between">
+                <div>
+                    <p class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-2">The Offer</p>
+                    <h2 class="text-4xl font-bold mb-4 italic">₹10,000 License</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">Early-adopter lifetime pricing. Zero subscription fees. Includes custom QR hardware blueprints and 24/7 analytics monitoring.</p>
+                </div>
+                <div class="mt-8 flex gap-4">
+                    <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-gray-400">#NoCompetitors</span>
+                    <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-gray-400">#HighRetention</span>
+                </div>
+            </div>
+            <div class="glass-card p-10 bg-blue-600/[0.03] border-blue-500/20">
+                <p class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest mb-2">Partner Pay</p>
+                <h2 class="text-6xl font-black text-emerald-400 italic mb-2">50%</h2>
+                <p class="text-2xl font-bold text-white mb-4">₹5,000 <span class="text-xs text-gray-500 italic">Net Profit</span></p>
+                <p class="text-gray-500 text-[11px]">Settled instantly on transaction clearance.</p>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <h3 class="text-2xl font-bold mb-10 flex items-center gap-4 text-gray-300">
+                <span class="w-12 h-[1px] bg-blue-500"></span> The Sales Blueprint
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-8">
+                    <div class="text-blue-500 font-black text-3xl mb-4">01</div>
+                    <h4 class="font-bold mb-2">Identify</h4>
+                    <p class="text-gray-400 text-xs">Target high-ticket local businesses with 4.0 - 4.3 star ratings on Google.</p>
+                </div>
+                <div class="glass-card p-8">
+                    <div class="text-blue-500 font-black text-3xl mb-4">02</div>
+                    <h4 class="font-bold mb-2">The Magic Trick</h4>
+                    <p class="text-gray-400 text-xs">Ask the owner to scan the QR and rate 1-star. Watch their face when it hits the PRIVATE dashboard.</p>
+                </div>
+                <div class="glass-card p-8">
+                    <div class="text-blue-500 font-black text-3xl mb-4">03</div>
+                    <h4 class="font-bold mb-2">The Close</h4>
+                    <p class="text-gray-400 text-xs">Pitch the ₹10,000 one-time fee as "Reputation Insurance" that pays for itself.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-20 mb-32">
+            <div class="glass-card p-4 md:p-10">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-xl font-bold italic">Module Alpha: <span class="text-gray-500 font-normal">Review Filter</span></h3>
+                    <div class="text-[10px] text-gray-600 font-mono tracking-tighter italic">ID: INT_09X</div>
+                </div>
+                <div class="demo-container">
+                    <iframe src="file:///C:/Users/Rajesh%20singh/Documents/Review_Filter.html" title="Shield Demo"></iframe>
+                </div>
+            </div>
+
+            <div class="glass-card p-4 md:p-10">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-xl font-bold italic">Module Beta: <span class="text-gray-500 font-normal">Command Center</span></h3>
+                    <div class="text-[10px] text-gray-600 font-mono tracking-tighter italic">ID: DASH_04V</div>
+                </div>
+                <div class="demo-container">
+                    <iframe src="file:///C:/Users/Rajesh%20singh/Documents/dashboard.html" title="Dashboard Demo"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Partner Intel & Logistics</h2>
+            <div class="space-y-4 max-w-3xl mx-auto">
+                <details class="glass-card p-6 group cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-sm tracking-tight">
+                        What exactly is "Filtered Data"?
+                        <span class="text-blue-500 transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="mt-6 text-gray-400 text-xs leading-relaxed space-y-2">
+                        <p>Filtered data represents 1, 2, or 3-star ratings. These are users who are unhappy. Instead of letting them post to Google, our system catches them at the source.</p>
+                        <p>This allows the business owner to call the customer back and fix the problem *before* the damage becomes public.</p>
+                    </div>
+                </details>
+
+                <details class="glass-card p-6 group cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-sm tracking-tight">
+                        Is this software "White-Labeled"?
+                        <span class="text-blue-500 transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-6 text-gray-400 text-xs leading-relaxed">Yes. For each client, we customize the colors, logos, and QR codes to match their brand. When a salesperson sells a license, they are providing a custom-tailored tech solution.</p>
+                </details>
+
+                <details class="glass-card p-6 group cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-sm tracking-tight">
+                        How do I verify a payment?
+                        <span class="text-blue-500 transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p class="mt-6 text-gray-400 text-xs leading-relaxed">Once the client completes the payment via the Instamojo portal, take a screenshot of the success page and send it to our admin WhatsApp. Your commission is processed within 1 hour.</p>
+                </details>
+            </div>
+        </section>
+
+        <footer class="text-center pb-32">
+            <div class="glass-card p-16 border-blue-500/20 shadow-[0_0_50px_rgba(59,130,246,0.1)]">
+                <h3 class="text-3xl font-black mb-4">Start Scaling.</h3>
+                <p class="text-gray-500 mb-10 text-sm italic">You close the deal. We handle the code. Together, we build the empire.</p>
+                <a href="YOUR_INSTAMOJO_LINK" class="inline-block px-12 py-5 bg-blue-600 text-white font-black rounded-2xl hover:bg-blue-500 transition-all hover:scale-105 active:scale-95">
+                    REQUEST PAYMENT LINK
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
